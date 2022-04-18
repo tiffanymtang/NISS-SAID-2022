@@ -2,7 +2,7 @@
 
 Explore how NAEP reading scores have changed over time by visiting https://tiffanymtang.shinyapps.io/NISS-reading-scores/.
 
-![](./figures/NISS-reading-scores.gif)
+<img src="./figures/NISS-reading-scores.gif" width="100%" height="100%"/>
 
 ### Description 
 
