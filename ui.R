@@ -164,24 +164,21 @@ ui <- dashboardPage(
         ),
 
         # Click on state to compare --------------------------------------------
-        conditionalPanel(
-          "input.trend_type != 'Trends By Census Region'",
-          div(
-            id = "compare_state_div",
-            style = "margin-left: 40px; margin-top: 10px;",
-            angle_right_link("compare_state_link",
-              label = "Click to compare to other states"
-            ),
-            picker_multiple_input(
-              "compare_state",
-              label = NULL, maxOptions = 3, width = "fit",
-              choices = c(state.name, "District of Columbia")
-            ) %>%
-              tagAppendAttributes(style = "margin-left: 14px;") %>%
-              display_inline() %>%
-              hidden()
-          ) %>% tagAppendAttributes(class = "invisible")
-        ),
+        div(
+          id = "compare_state_div",
+          style = "margin-left: 40px; margin-top: 10px;",
+          angle_right_link("compare_state_link",
+                           label = "Click to compare to other states"
+          ),
+          picker_multiple_input(
+            "compare_state",
+            label = NULL, maxOptions = 3, width = "fit",
+            choices = c(state.name, "District of Columbia")
+          ) %>%
+            tagAppendAttributes(style = "margin-left: 14px;") %>%
+            display_inline() %>%
+            hidden()
+        ) %>% tagAppendAttributes(class = "invisible"),
 
         # Back to national trends button ---------------------------------------
         div(
